@@ -5,6 +5,8 @@ const App = () => {
   const APP_ID = "53e91caa";
   const APP_KEY = "172777cd621aecb4357bd994353f4b78";
 
+  const [recipes, setRecipes] = useState([]);
+
   useEffect(() => {
     getRecipes();
   }, []);
@@ -15,7 +17,7 @@ const App = () => {
     );
     const data = await response.json();
     // eslint-disable-next-line no-unused-expressions
-    console.log(data);
+    setRecipes(data.hits);
   };
 
   return (
