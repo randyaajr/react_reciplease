@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Recipe from "./recipe";
+import "./custom.scss";
 import "./App.css";
 
 const App = () => {
